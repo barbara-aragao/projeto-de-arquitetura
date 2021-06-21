@@ -3,7 +3,7 @@ package br.edu.gus.ifpe.entity;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.ArrayList;
+import java.util.List;
 
 public class Addvenda {
 
