@@ -16,7 +16,7 @@ public class DescontoService {
 		var addvenda = desconto.getAddvenda();
 		var total = addvenda.calcularValorTotalVenda();
  		for (Item item : addvenda.getItens()) {
-       		if( itens.getQuantidade() >= 3) {
+       		if( item.getQuantidade() >= 3) {
 		     	total -= ((item.getProduto().getPreco() * 3) * 0.1);
 		}
 }

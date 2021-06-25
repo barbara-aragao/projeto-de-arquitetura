@@ -5,7 +5,8 @@ public class Item {
 	private Produto produto;
 	private int quantidade;
 	
-	public void Item(Produto produto, int quantidade) {
+
+	public Item(Produto produto, int quantidade) {
 		this.produto = produto;
 		this.quantidade = quantidade;
 		
