@@ -11,12 +11,13 @@ public class Produto {
 	public Produto(String nome, double preco, Categoria categoria) {
 		this.nome = nome;
 		this.categoria = categoria;
+		this.preco = preco;
 	}
 	public void setCategoria(Categoria categoria) {
-		this.categoria = categoria;
+		 this.categoria = categoria;
 	}
-	public void getCategoria(Categoria categoria) {
-		this.categoria = categoria;
+	public Categoria getCategoria(Categoria categoria) {
+		return this.categoria = categoria;
 	}
 	
 	

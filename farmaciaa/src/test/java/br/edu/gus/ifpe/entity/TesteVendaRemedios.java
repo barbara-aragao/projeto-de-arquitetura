@@ -1,26 +1,13 @@
 package br.edu.gus.ifpe.entity;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
-
-
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 
 import br.edu.gus.ifpe.service.DescontoService;
 import br.edu.gus.ifpe.service.servicoVenda;
-import br.edu.gus.ifpe.entity.Item;
-
-
-
-import static org.junit.Assert.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertThrows;
-
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
 public class TesteVendaRemedios {
 
 	private Produto produto;
@@ -30,12 +17,12 @@ public class TesteVendaRemedios {
 	private Item item;
 	private Item item2;
 	
-   @BeforeEach
+   @Before
     	public void iniciarCenario() {
 		  //Produtos selecionados
 		  addvenda = new Addvenda();
-		  produto3 = new Produto("Doril", 20.00, new Categoria("Rem�dios"));
-		  produto = new Produto("Paracetemol", 100.00, new Categoria("Rem�dios"));
+		  produto3 = new Produto("Doril", 20.00, new Categoria("remedios"));
+		  produto = new Produto("Paracetemol", 100.00, new Categoria("remedios"));
 		  item = new Item(produto3, 2);
 	      item2 = new Item (produto, 3);
 	}
@@ -50,7 +37,8 @@ public class TesteVendaRemedios {
 		  var total = addvenda.calcularValorTotalVenda();
 		  
 		  //Ent�o
-		  assertEquals(340.00, total);
+		  assertEquals("340.00", total);
+		  
 	  }
 	
 	@Test

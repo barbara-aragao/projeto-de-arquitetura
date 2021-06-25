@@ -1,5 +1,6 @@
 package br.edu.gus.ifpe.entity;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
@@ -11,9 +12,9 @@ public class TesteProduto {
 	
 	@Test
 	public void CategoriaDoProduto() {
-		produto = new  Produto("Dipirona", 100.00, new Categoria("Remédio"));
+		produto = new  Produto("Dipirona", 100.00, new Categoria("Remï¿½dio"));
 		assertNotNull(produto.getCategoria());
-		assertEquals("Remédio", produto.getCategoria().getNome());
+		assertEquals("Remï¿½dio", produto.getCategoria().getNome());
 		
 	}
 

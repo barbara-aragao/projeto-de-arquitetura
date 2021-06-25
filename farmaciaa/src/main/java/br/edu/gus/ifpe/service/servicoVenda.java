@@ -20,13 +20,13 @@ public class servicoVenda {
 	 
  }
      public double calculoDesconto() {
-	    var totoal = addvenda.pegaValorTotal();
+	    var total = addvenda.calcularValorTotalVenda();
 		switch (formaPagamento) {
 		case DEBITO:
-			total -= addvenda.pegaValorTotal() * 0.05;
+			total -= addvenda.calcularValorTotalVenda() * 0.05;
 			break;
 		case BOLETO:
-			total -= addvenda.pegaValorTotal()* 0.1;
+			total -= addvenda.calcularValorTotalVenda()* 0.1;
 			default:
 				break;
 		}
